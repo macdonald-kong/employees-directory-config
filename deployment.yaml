@@ -18,15 +18,17 @@ spec:
         type: backend
     spec:
       containers:
-      - name: employee-directory
-        image: davidmacdonaldkong/employees-directory:latest
-        readinessProbe:
-          httpGet:
-            path: /api/employees
-            port: 8080
-          initialDelaySeconds: 20
-          periodSeconds: 10
-          successThreshold: 1
-          failureThreshold: 5
-        ports:
-        - containerPort: 8080
+        - name: employee-directory
+          image: davidmacdonaldkong/employees-directory:latest
+          readinessProbe:
+            httpGet:
+              path: /api/employees
+              port: 8080
+            initialDelaySeconds: 20
+            periodSeconds: 10
+            successThreshold: 1
+            failureThreshold: 5
+          ports:
+            - containerPort: 8080
+  containers:
+    - image: davidmacdonaldkong/employees-directory:9b093115b5f43c8fc683a6e08d9edc3da22d5936
