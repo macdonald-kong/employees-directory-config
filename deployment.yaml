@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: employee-directory
-          image: davidmacdonaldkong/employees-directory:db9daf84db9e3eb69f704049558213f460f69683
+          image: davidmacdonaldkong/employees-directory:af40730a2e6aafaaf82a34f355955d2428c5523e
           readinessProbe:
             httpGet:
               path: /api/employees
