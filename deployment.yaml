@@ -30,5 +30,3 @@ spec:
             failureThreshold: 5
           ports:
             - containerPort: 8080
-  containers:
-    - image: davidmacdonaldkong/employees-directory:9b093115b5f43c8fc683a6e08d9edc3da22d5936
